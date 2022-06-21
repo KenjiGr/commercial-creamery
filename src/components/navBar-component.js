@@ -13,7 +13,7 @@ function NavBar() {
                 </nav>
             </div>
             <div className="middle">
-                <img src="public/photos/logo.jpg" alt='Commercial Creamery Logo' />
+                <img src={require('../photos/logo.jpg')} alt='Commercial Creamery Logo' />
             </div>
             <div className="navi right">
                 <nav>
