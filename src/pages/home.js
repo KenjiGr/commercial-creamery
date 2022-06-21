@@ -1,24 +1,28 @@
 import React, { useEffect, useState } from "react";
 
 function Home(){
-    const index = ['One','Two','Three','Four'];
-    const [image, setImage] = useState(index[0]);
+    const images = ['One','Two','Three','Four'];
+    const [image, setImage] = useState(0);
 
     useEffect(() => {
-        const interval = setInterval(() => changeImg(), 1000)
+        const interval = setInterval(() => {
+            if(image === images.length - 1){
+                setImage(0)
+            }
+            else{
+                setImage(image + 1);
+            }
+        }, 20000)
         return () => {
             clearInterval(interval)
         }
-    },[])
+    },[image, images.length])
 
-    const changeImg = () => {
-        let newImg = 0;
-    }
     return(
         <div>
             <div>
                 <h1>Bringing flavor to the world for over a century!</h1>
-                <img src={require(`../photos/top_image_${image}.jpg`)} alt="Spices"/>
+                <img src={require(`../photos/top_image_${images[image]}.jpg`)} alt="Spices"/>
                 <h1>Our Story</h1>
                 <p>Founded in 1908, Commercial Creamery is a leading manufacturer of cheese
 powder, specialty dairy powders, and seasonings. From our production facility in
@@ -47,7 +51,7 @@ working with two- to six-ton quantities so you get the amount you need.</p>
                 </ul>
             </div>
             <div>
-                <img src={require(`../photos/landscape_Image_${image}.jpg`)} alt='landscape'/>
+                <img src={require(`../photos/landscape_Image_${images[image]}.jpg`)} alt='landscape'/>
                 <h1>Lorem Ipsum</h1>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
 euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
