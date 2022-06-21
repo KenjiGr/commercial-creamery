@@ -1,0 +1,19 @@
+a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin: 1rem;
+}
+
+.nav-cont{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.navi{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9rem;
+}
