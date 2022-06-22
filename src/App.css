@@ -2,8 +2,14 @@
   margin: 0 10%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .main-cont{
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .main-cont{
+    margin: 0 5%;
   }
 }

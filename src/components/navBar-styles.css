@@ -19,6 +19,20 @@ a{
     height: 9rem;
 }
 
-@media screen and (max-width: 1000px){
+.dropdown{
+    display: none;
+}
+
+@media screen and (max-width: 1200px){
+    a{
+       font-size: 1.2rem;
+       margin: 0 1rem;
+    }
+    .nav-cont{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 900px){
     
 }
