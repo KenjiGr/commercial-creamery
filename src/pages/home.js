@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './home-styles.css'
 
 function Home(){
     const images = ['One','Two','Three','Four'];
@@ -19,10 +20,10 @@ function Home(){
     },[image, images.length])
 
     return(
-        <div>
-            <div>
+        <div className="home-cont">
                 <h1>Bringing flavor to the world for over a century!</h1>
-                <img src={require(`../photos/top_image_${images[image]}.jpg`)} alt="Spices"/>
+                <img src={require(`../photos/top_image_${images[image]}.jpg`)} alt="Spices" width="75%"/>
+            <div className="section-cont">
                 <h1>Our Story</h1>
                 <p>Founded in 1908, Commercial Creamery is a leading manufacturer of cheese
 powder, specialty dairy powders, and seasonings. From our production facility in
@@ -34,8 +35,8 @@ and flavor applications.</p>
                 <p>We view our customers as partners and have built our business on our ability to
 react quickly to their needs while keeping quality and safety as our highest priority</p>
             </div>
-            <div>
-                <img src={require("../photos/Cow_Image.jpg")} alt='cow'/>
+                <img src={require("../photos/Cow_Image.jpg")} alt='cow' width="75%"/>             
+            <div className="section-cont">
                 <h1>What Makes Us Different</h1>
                 <p>We pride ourselves on being a family-owned business for four generations,
 keeping the same level of quality throughout the years. Since our doors opened
@@ -50,8 +51,8 @@ working with two- to six-ton quantities so you get the amount you need.</p>
                     <li>Custom Blending and Specialty Flavors</li>
                 </ul>
             </div>
-            <div>
-                <img src={require(`../photos/landscape_Image_${images[image]}.jpg`)} alt='landscape'/>
+                <img src={require(`../photos/landscape_Image_${images[image]}.jpg`)} alt='landscape' width="75%"/>
+            <div className="section-cont">
                 <h1>Lorem Ipsum</h1>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
 euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad

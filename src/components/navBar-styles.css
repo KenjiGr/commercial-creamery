@@ -1,7 +1,7 @@
 a{
     text-decoration: none;
     font-size: 1.4rem;
-    margin: 1rem;
+    margin: 0 1.4rem;
     color: grey;
 }
 
@@ -17,4 +17,8 @@ a{
     justify-content: space-between;
     align-items: center;
     height: 9rem;
+}
+
+@media screen and (max-width: 1000px){
+    
 }
